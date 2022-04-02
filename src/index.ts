@@ -1,5 +1,27 @@
-const helloword: string = "hello world";
-console.log(helloword);
+import * as dotenv from "dotenv";
+import express from "express";
+import cors from "cors";
+import helmet from "helmet";
 
-const str = '123456-123';
-console.log(str);
+import {controller} from "./router"
+
+dotenv.config();
+
+if (!process.env.PORT) {
+    process.exit(1);
+}
+
+const PORT: number = parseInt(process.env.PORT as string, 10);
+
+const app = express();
+
+app.use(helmet());
+app.use(cors());
+app.use(express.json());
+
+app.use(controller);
+
+
+app.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`);
+});
