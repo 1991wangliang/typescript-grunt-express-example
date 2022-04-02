@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "composite": true,
+        "target": "ES6",
+        "allowJs": false,
+        "module": "commonjs",
+        "sourceMap": false,
+        "forceConsistentCasingInFileNames":true,
+        "outDir": "out"
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}

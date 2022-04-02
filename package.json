@@ -1,0 +1,21 @@
+{
+  "name": "tsc-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^1.4.1",
+    "grunt-ts": "^6.0.0-beta.22"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "^1.1.0",
+    "typescript": "^4.6.3"
+  },
+  "scripts": {
+    "build": "grunt ts",
+    "watch": "grunt watch",
+    "start": "node out/index.js"
+},
+  "author": "",
+  "license": "ISC"
+}
