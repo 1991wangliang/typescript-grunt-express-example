@@ -3,7 +3,7 @@
         "strict": true,
         "composite": true,
         "target": "ES6",
-        "allowJs": false,
+        "allowJs": true,
         "module": "commonjs",
         "sourceMap": false,
         "forceConsistentCasingInFileNames":true,
