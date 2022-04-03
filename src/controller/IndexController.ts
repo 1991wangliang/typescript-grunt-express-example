@@ -1,15 +1,16 @@
 import express, { Request, Response } from "express";
+import { emit } from "process";
 
 import {Test} from "./test"
 
-export const controller = express.Router();
+export const indexController = express.Router();
 
 const test = new Test();
 
-controller.get("/", async (req: Request, res: Response) => {
+indexController.get("/", async (req: Request, res: Response) => {
     const queryName = req.query["name"];
     test.hello(queryName);
-    res.json({success:'1'});
+    res.json({hello:queryName});
 });
 
 

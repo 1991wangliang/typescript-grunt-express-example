@@ -3,7 +3,7 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 
-import {controller} from "./router"
+import {indexController} from "./controller/IndexController"
 
 dotenv.config();
 
@@ -19,7 +19,7 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
-app.use(controller);
+app.use(indexController);
 
 
 app.listen(PORT, () => {
